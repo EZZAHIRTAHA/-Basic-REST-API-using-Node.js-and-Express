@@ -18,7 +18,7 @@ app.use(errorHandler);
 app.use('/api/goals', require('./routes/goalRoutes'));
 app.use('/api/users', require('./routes/userRoutes'))
 app.get('/', (req, res) => {
-    res.send('<h1 style="text-align:center;margin-top:5rem;color:lightblue;">Home Page</h1>')
+    res.send('<h1 style="text-align:center;margin-top:5rem;color:lightblue;">Welcome</h1>')
 })
 app.listen(port, () => console.log(`Port listening on http://localhost:${port}`.blue.italic.underline));
 
