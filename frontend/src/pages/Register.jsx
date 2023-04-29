@@ -1,4 +1,8 @@
 import React from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { register, reset } from '../features/auth/authSlice'
+import { useNavigate } from 'react-router-dom'
+import {toast} from 'react-toastify'
 
 const Register = () => {
 
@@ -9,6 +13,9 @@ const Register = () => {
     password: '',
     password_confirmation: '',
   })
+
+  const dispatch = useDispatch()
+  const user = useSelector(state => state.user)
   
   const {name, email, password, password_confirmation} = formData
 

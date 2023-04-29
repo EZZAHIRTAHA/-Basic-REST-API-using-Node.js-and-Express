@@ -3,7 +3,8 @@ import {useSelector} from 'react-redux'
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import { Login, Register, Dashboard } from './pages'
 import Navbar from './components/Navbar'
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const App = () => {
   return (
     <>
@@ -17,6 +18,7 @@ const App = () => {
           </Routes>
         </div>
       </Router>
+      <ToastContainer/>
     </>
   )
 }
