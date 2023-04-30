@@ -1,9 +1,12 @@
 import React from 'react'
-
+import { useSelector } from 'react-redux'
+import axios from axios
 const Dashboard = () => {
+
+  const user = useSelector(state=>state)
   return (
     <div>
-      <h1>Dashboard</h1>
+      {user && <h1>Hello {user.name}</h1>}
     </div>
   )
 }
