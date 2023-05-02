@@ -15,10 +15,16 @@ const Login = () => {
   }
 
 
+  
+  const handleSubmit = (e) => {
+    e.preventDefault()
+  }
+
+
 
 
   return (
-    <form className='form'>
+    <form className='form' onSubmit={handleSubmit}>
       <div className="form-group">
       <div className="">
         <label htmlFor="email" className="">Your email</label>
